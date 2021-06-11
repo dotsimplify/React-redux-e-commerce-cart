@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+.nav-links-ul {
+  display: inline;
+}
+.nav-links {
+  display: inline;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin: 1rem;
+}
+.nav-links:hover {
+  text-decoration: underline;
+}
+.headline-text {
+  font-size: 1.3rem;
+  margin: 0.5rem;
+  margin-right: 1rem;
+}
+label {
+  margin: 0.5rem;
+  color: #474747;
+}
+
+.product-image {
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  max-height: 30rem;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkbox-div {
+  margin: 0.5rem;
+}
+.cart-icon {
+  font-size: 0.9rem;
+  margin-right: 0.2rem;
+  color: #868686;
+  padding-top: 0.1rem;
+}
+.cart-icon:hover {
+  color: #000;
+}
+.display-title {
+  border-top: 1px solid #a3a2a2;
+  padding-top: 0.8rem;
+
+  font-size: 0.8rem;
+  color: #949393;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+.display-price {
+  font-size: 1.3rem;
+
+  margin: 0.5rem;
+  margin-left: 1rem;
+}
+/* Product Style starts here  */
+.total-headline {
+  margin: 2rem;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 0.5rem;
+  margin: 2rem;
+}
+.product-div {
+  border: 1px solid #a3a2a2;
+  padding: 1rem;
+}
+
+.button-add {
+  margin-left: 1rem;
+  outline: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #474747;
+  border: 1px solid #a3a2a2;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+.button-add:hover {
+  color: #000;
+  border: 1px solid #ffffff;
+  background-color: #474747;
+  color: #fff;
+}
+/* Cart styling starts here  */
+
+.cart-heading {
+  margin: 1rem;
+  text-align: center;
+  color: #8a8888;
+}
+.cart-main-grid {
+  display: grid;
+  margin: 3rem;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.cart-grid {
+  grid-column: 1/5;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.check-subgrid {
+  grid-column: 5 / -1;
+}
+.cart-checkout-div {
+  border: 1px solid #bebebe;
+  padding: 0.5rem;
+}
+.cart-title {
+  font-size: 1.2rem;
+  color: #666565;
+}
+.cart-price {
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+  color: #8f8e8e;
+}
+.cart-quantity {
+  font-size: 1.3rem;
+  color: #474747;
+}
+.cart-image-round {
+  width: 100;
+  height: auto;
+  max-height: 4rem;
+  max-width: 4rem;
+}
+.cart-icons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.icon-plus {
+  font-size: 1.7rem;
+  margin: 0.5rem;
+  color: #b3b1b1;
+}
+.icon-plus:hover {
+  color: #313131;
+}
+.icon-minus {
+  font-size: 2.2rem;
+  margin: 0.3rem;
+  color: #b3b1b1;
+}
+.icon-minus:hover {
+  color: #313131;
+}
+.checkout-total-items {
+  color: #b4b3b3;
+  padding: 1rem;
+}
+.checkout-button-div {
+  padding: 1rem;
+}
+.checkout-button {
+  padding: 1rem;
+  margin: 0.3rem;
+  color: #fff;
+  border: 1px solid #2b2929;
+  background-color: #2b2929;
+}
+.checkout-button:hover {
+  color: #2b2929;
+  border: 1px solid #2b2929;
+  background-color: #fff;
+}
+.checkout-data {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.noItem {
+  font-size: 1.3rem;
+  color: #868686;
+  grid-column: 1/-1;
+  width: 100%;
+}
+@media (max-width: 576px) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 0.5rem;
+  }
+  .filter {
+    display: block;
+    text-align: center;
+  }
+  .product-image {
+    max-height: 25rem;
+  }
+  .cart-main-grid {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .cart-grid {
+    grid-column: 1/-1;
+  }
+  .check-subgrid {
+    grid-column: 1/-1;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 1023px) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.5rem;
+  }
+  .product-image {
+    max-height: 25rem;
+  }
+}
